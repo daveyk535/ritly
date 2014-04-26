@@ -1,10 +1,16 @@
 Ritly::Application.routes.draw do
   
-  root 'urls#new'
+  root to: 'urls#new'
 
-  get 'urls/index', to: 'urls#index'
+  resources :urls
+
+  # get 'urls', to: 'urls#index', as: :urls
+
+  
+  # get 'urls/:id', to: 'urls#show', as: :url
+
+  # post 'urls/:id', to: 'urls#create'
 
 
-resources :urls
 
 end

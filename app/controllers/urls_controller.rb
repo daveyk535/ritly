@@ -9,12 +9,16 @@ class UrlsController < ApplicationController
   end
 
   def create
+  	# binding.pry
 		@url = Url.create url_params
-		redirect_to root_path
+		@url.random_string = SecureRandom.urlsafe_base64(8)
+		@url.save
+
+		redirect_to url_path(@url.id)
 	end
 
 	def show
-		@url = Url.find(params)
+		@url = Url.find(params[:id])
 	end
 
 	def edit
@@ -26,6 +30,12 @@ class UrlsController < ApplicationController
 	def destroy
 	end
 
+	def go
+	end
 
+	private
+	def url_params
+		params.require(:url).permit(:link, :random_string)
+	end
 
 end

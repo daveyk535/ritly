@@ -1,0 +1,11 @@
+<h1>Edit Your Link</h1>
+<%= form_for @url do |f| %>
+
+  <%= label_tag(:link, "Link:") %>
+  <%= f.text_field :link, :class => "form-control" %></br>
+
+  <%= label_tag(:random_string, "Random String") %>
+  <%= f.text_area :random_string, :class => "form-control" %></br>
+  
+  <%= f.submit "Update" %>
+<% end %>

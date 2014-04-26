@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 url = Url.create([
-	{link: "www.google.com", random_string: "T7DViXiIxFE" },
-	{link: "www.cnn.com", random_string: "m1gpLHq8aoY" }
+	{link: "http://www.google.com", random_string: "T7DViXiIxFE" },
+	{link: "http://www.cnn.com", random_string: "m1gpLHq8aoY" }
 
 	])

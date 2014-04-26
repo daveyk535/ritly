@@ -13,7 +13,6 @@ class UrlsController < ApplicationController
 		@url = Url.create url_params
 		@url.random_string = SecureRandom.urlsafe_base64(8)
 		@url.save
-
 		redirect_to url_path(@url.id)
 	end
 
@@ -31,6 +30,8 @@ class UrlsController < ApplicationController
 	end
 
 	def go
+		@url = Url.find_by(random_string: params[:random_string])
+		redirect_to @url.link
 	end
 
 	private

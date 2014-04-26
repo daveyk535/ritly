@@ -1,3 +1,14 @@
 <h1>Show page</h1>
 
-<%= @url.inspect %>
+<p>Your generated url:</p>
+<%= link_to @url["random_string"], go_path(@url["random_string"]) %>
+
+<p>Your original url:</p>
+<%= link_to @url["link"], go_path(@url["random_string"]) %>
+
+</br>
+</br>
+
+<%= link_to "Back To Home ",root_path%>
+
+<!-- # <%= @url.inspect %> -->

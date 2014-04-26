@@ -2,6 +2,8 @@ Ritly::Application.routes.draw do
   
   root to: 'urls#new'
 
+  get 'urls/go/:random_string', to: 'urls#go', as: :go # go_path(:random_string)
+
   resources :urls
 
   # get 'urls', to: 'urls#index', as: :urls

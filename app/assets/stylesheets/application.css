@@ -13,11 +13,19 @@
  *= require_tree .
  */
 
-
-
- body.new {
+body.new {
+ 	font-family: 'Pinyon Script', 'cursive';
  	text-align: center;
-	font-family: 'Shadows Into Light Two', 'cursive';
+ 	background-color: purple;
+ 	color: black;
+	/*font-family: 'Shadows Into Light Two', 'cursive';*/
+	
+ }
+ 
+ #title {
+ 	font-family: 'Pinyon Script', 'cursive';
   font-size: 48px;
   text-shadow: 4px 4px 4px #aaa;
+  text-align: center;
+
  }

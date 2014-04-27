@@ -1,12 +1,14 @@
 <body class="new">
 
-
+<div id="title">
 <h1>Ritly</h1>
+</div
+
 
 <%= form_for @url do |f| %>
 
   <%= label_tag(:link, "Link:") %>
-  <%= f.text_field :link, :class => "form-control" %></br>
+  <%= f.text_field :link %></br>
  
   <%= f.submit "Request Code"%>
 <% end %>
